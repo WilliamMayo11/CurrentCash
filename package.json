@@ -1,0 +1,26 @@
+{
+  "name": "currentcash",
+  "version": "1.0.0",
+  "description": "currency exchange rates with fixer.io api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamMayo11/CurrentCash.git"
+  },
+  "author": "Bill Mayo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WilliamMayo11/CurrentCash/issues"
+  },
+  "homepage": "https://github.com/WilliamMayo11/CurrentCash#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "node-fetch": "^1.6.3"
+  }
+}
