@@ -11,7 +11,7 @@ router.get('/', getExchangeRate, (req, res) => {
   })
 })
 
-router.post('/search', baseRate, (req, res) => {
+router.get('/search', baseRate, (req, res) => {
   console.log(res.money)
   res.render('index', {
     money: res.money

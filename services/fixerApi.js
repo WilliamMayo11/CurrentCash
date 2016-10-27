@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const API_URL_SEARCH = 'http://api.fixer.io/latest?';
 
 function baseRate(req, res, next) {
-  fetch(`${API_URL_SEARCH}base=$req.query.searchTerm}`)
+  fetch(`${API_URL_SEARCH}base=${req.query.base}`)
   .then(r => r.json())
   .then(result => {
     res.money = result; // res.money = result.rates will bring just the rates
