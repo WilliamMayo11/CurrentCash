@@ -1,26 +1,27 @@
 {
-  "name": "currentcash",
+  "name": "current_cash_v2",
   "version": "1.0.0",
-  "description": "currency exchange rates with fixer.io api",
+  "description": "Daily exchange rate comparison",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WilliamMayo11/CurrentCash.git"
-  },
   "author": "Bill Mayo",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/WilliamMayo11/CurrentCash/issues"
-  },
-  "homepage": "https://github.com/WilliamMayo11/CurrentCash#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^2.0.0",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
-    "node-fetch": "^1.6.3"
+    "node-fetch": "^1.6.3",
+    "path": "^0.12.7"
   }
 }

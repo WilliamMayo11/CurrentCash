@@ -7,30 +7,8 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-
-  <h1>Exchange Rates</h1>
-  <p><%= money %></p>
-
-  <form action="./search" method="get">
-    <input type="text" name="base" placeholder="Type Currency Code">
-    <input type="submit" value="Search">
-  </form>
-
-  <div>
-    <% let allRates = money.rates;
-      for (let code in allRates) { %>
-      <div><%= code + ": " + allRates[code] %>
-        <form action="./favorites" method="POST">
-          <input type="hidden" name="watch">
-          <input type="submit" value="SAVE">
-        </form>
-      </div>
-  <% } %>
-  </div>
-
-  <div class="favorites">
-
-  </div>
-
+  <h1>Home</h1>
+  <a href="/signup">Sign Up</a>
+  <a href="/login">Log In</a>
 </body>
 </html>
