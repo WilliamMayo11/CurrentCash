@@ -2,13 +2,26 @@ const express = require('express');
 const logger = require('morgan');
 const indexRouter = require('./routes/index.js');
 const usersRouter = require('./routes/users.js');
-const bodyParser      = require('body-parser');
+const authRouter = require('./routes/auth.js');
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+
 
 const app = express();
+const SECRET = 'tacos3000';
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+app.use(cookieParser());
+
+app.use(session({
+  resave: false,
+  saveUninitialized: false,
+  secret: SECRET
+}));
 
 app.use(express.static('public'));
 app.use(logger('dev'));
@@ -16,13 +29,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 
-
-// app.use(session({
-//   resave: false,
-//   saveUninitialized: false,
-//   secret: SECRET
-// }));
 
 app.listen(port, () => console.log('Server is listening on port ', port));
 
