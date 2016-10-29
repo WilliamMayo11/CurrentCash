@@ -6,10 +6,11 @@
   </head>
   <body>
     <!-- Example -->
-    <h1>Welcome!</h1>
+    <h1>Welcome! <%= user.username %></h1>
     <a href="/exchanges">Search Exchange Rates</a>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>
+
   </body>
 </html>

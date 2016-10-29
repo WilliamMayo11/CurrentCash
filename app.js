@@ -3,6 +3,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index.js');
 const usersRouter = require('./routes/users.js');
 const authRouter = require('./routes/auth.js');
+const exchangesRouter = require('./routes/exchanges.js');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -30,6 +31,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
+app.use('/exchanges', exchangesRouter);
 
 
 app.listen(port, () => console.log('Server is listening on port ', port));

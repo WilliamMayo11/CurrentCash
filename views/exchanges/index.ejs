@@ -5,9 +5,9 @@
 <body>
 
   <h1>Exchange Rates</h1>
-  <p><%= money %></p>
+ <h3>for <%= user.username %></h3>
 
-  <form action="./search" method="get">
+  <form action="/exchanges/search" method="get">
     <input type="text" name="base" placeholder="Type Currency Code">
     <input type="submit" value="Search">
   </form>
@@ -16,7 +16,7 @@
     <% let allRates = money.rates;
       for (let code in allRates) { %>
       <div><%= code + ": " + allRates[code] %>
-        <form action="./favorites" method="POST">
+        <form action="/favorites" method="POST">
           <input type="hidden" name="watch" value='<%= code + ": " + allRates[code] %>' >
           <input type="submit" value="SAVE">
         </form>

@@ -8,7 +8,6 @@ const bcrypt       = require('bcryptjs');
 const SALTROUNDS = 10;
 
 function createUser(req, res, next) {
-  console.log(req.body);
   const userObject = {
     username: req.body.user.username,
     email: req.body.user.email,
@@ -18,12 +17,13 @@ function createUser(req, res, next) {
     // Store hashed password
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
   };
+  console.log("_______ from createUser", userObject);
 
   getDB().then((db) => {
     db.collection('users')
       .insert(userObject, (insertErr, dbUser) => {
         if (insertErr) return next(insertErr);
-
+console.log('______from database insert', dbUser);
         res.user = dbUser;
         db.close();
         return next();

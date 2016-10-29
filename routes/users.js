@@ -12,6 +12,4 @@ usersRouter.get('/profile', authenticate, (req, res) => {
   res.render('users/profile', { user: res.user });
 });
 
-
-
 module.exports = usersRouter;
