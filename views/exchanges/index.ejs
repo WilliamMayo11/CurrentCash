@@ -37,10 +37,17 @@
   <div class="favorites">
 
     <h2>Favorites:</h2>
-    <% for (let code in saved) { %>
+      <% saved.forEach((item) => { %>
+        <p><%= item.rates %></p>
+        <form action="exchanges/delete">
+          <input type="submit" value="delete">
+        </form>
+      <% }) %>
+
+<!--     <% for (let code in saved) { %>
       <div><%= code + ": " + saved[code] %></div>
 
-    <% } %>
+    <% } %> -->
   </div>
 
 </body>
