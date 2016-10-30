@@ -18,8 +18,3 @@ indexRouter.get('/login', (req, res) => {
 
 module.exports = indexRouter;
 
-
-// FRIDAY NIGHT STATUS:
-// after log in, it renders users/profile. is this right? check itunes
-// user is not defined in this instance
-// follow path of 'user' in itunes and see why that one carries over
