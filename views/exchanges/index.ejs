@@ -36,6 +36,11 @@
 
   <div class="favorites">
 
+    <h2>Favorites:</h2>
+    <% for (let code in saved) { %>
+      <div><%= code + ": " + saved[code] %></div>
+
+    <% } %>
   </div>
 
 </body>
