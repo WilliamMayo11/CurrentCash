@@ -12,6 +12,10 @@
     <input type="submit" value="Search">
   </form>
 
+  <% countries.forEach((item) => { %>
+  <p><%= item.name %></p>
+  <% }); %>
+
     <% let allRates = money.rates;
       for (let code in allRates) { %>
       <div><%= code + ": " + allRates[code] %>
@@ -21,6 +25,7 @@
         </form> -->
       </div>
   <% } %>
+
 
 
 

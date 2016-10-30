@@ -8,7 +8,8 @@ const { findCountries } = require('../services/restCountriesApi');
 exchangesRouter.get('/', authenticate, (req, res) => {
   res.render('exchanges/index', {
     user: res.user || [],
-    money: res.money || []
+    money: res.money || [],
+    countries: res.countries || []
   });
 });
 
@@ -19,7 +20,7 @@ exchangesRouter.get('/search', authenticate, findCountries, baseRate, (req, res)
     money: res.money || [],
     user: res.user || [],
     countries: res.countries || []
-  })
+  });
 });
 
 module.exports = exchangesRouter;
