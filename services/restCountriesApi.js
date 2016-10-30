@@ -6,7 +6,7 @@ function findCountries(req, res, next) {
   fetch(`${API_URL_SEARCH}/${req.query.base}`)
   .then(r => r.json())
   .then(result => {
-    res.countries = result; // res.money = result.rates will bring just the rates
+    res.countries = result;
     next();
   }).catch(err => {
     next();

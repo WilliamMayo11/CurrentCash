@@ -12,7 +12,6 @@
     <input type="submit" value="Search">
   </form>
 
-  <div>
     <% let allRates = money.rates;
       for (let code in allRates) { %>
       <div><%= code + ": " + allRates[code] %>
@@ -22,7 +21,8 @@
         </form> -->
       </div>
   <% } %>
-  </div>
+
+
 
 
   <div class="favorites">
