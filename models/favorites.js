@@ -48,7 +48,7 @@ function saveFavorite(req, res, next) {
 // Delete method doesn't change because we are deleting objects from the database
 // based on that object's unique _id - you do not need to specify which user as
 // the _id is sufficient enough
-function deleteFavorites(req, res, next) {
+function deleteFavorite(req, res, next) {
   MongoClient.connect(DB_CONNECTION, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
@@ -63,4 +63,4 @@ function deleteFavorites(req, res, next) {
   return false;
 }
 
-module.exports = { getFavorites, saveFavorite, deleteFavorites };
+module.exports = { getFavorites, saveFavorite, deleteFavorite };

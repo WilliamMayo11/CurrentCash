@@ -6,6 +6,9 @@
 
   <h1>Exchange Rates</h1>
  <h3>for <%= user.username %></h3>
+     <form action="/auth?_method=DELETE" method="post">
+      <input type="submit" value="Logout">
+    </form>
 
   <form action="/exchanges/search" method="get">
     <input type="text" name="base" placeholder="Type Currency Code">
@@ -39,15 +42,11 @@
     <h2>Favorites:</h2>
       <% saved.forEach((item) => { %>
         <p><%= item.rates %></p>
-        <form action="exchanges/delete">
+        <form action="exchanges/favorites<%= item._id %>?_method=DELETE" method="POST">
           <input type="submit" value="delete">
         </form>
       <% }) %>
 
-<!--     <% for (let code in saved) { %>
-      <div><%= code + ": " + saved[code] %></div>
-
-    <% } %> -->
   </div>
 
 </body>
