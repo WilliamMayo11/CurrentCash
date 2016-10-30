@@ -7,6 +7,7 @@ const exchangesRouter = require('./routes/exchanges.js');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 
 
 const app = express();
@@ -24,7 +25,7 @@ app.use(session({
   secret: SECRET
 }));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 

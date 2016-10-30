@@ -1,0 +1,28 @@
+.header-container {
+  background-color: white;
+  height: 80px;
+  width: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #7ec0ee;
+}
+.link-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 40px;
+  width: 140px;
+  padding: 10px;
+}
+a {
+  padding: 5px;
+  background-color: blue;
+}
+body {
+  font-family: 'Bitter', serif;
+  background: url('../images/world_map.jpg') no-repeat;
+  background-size: cover;
+  min-height: 650px;
+  background-position: 0px 100px;
+}
