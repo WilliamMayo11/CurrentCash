@@ -19,7 +19,7 @@ authRouter.post('/', logIn, (req, res) => {
 // Logout by assigning null to the userId in the session
 authRouter.delete('/', (req, res) => {
   req.session.userId = null;
-  res.redirect('/');
+  res.redirect('/users/login');
 });
 
 module.exports = authRouter;

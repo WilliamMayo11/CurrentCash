@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #7ec0ee;
+  min-width: 700px;
 }
 .link-container {
   display: flex;
@@ -13,11 +14,59 @@
   justify-content: space-between;
   height: 40px;
   width: 140px;
+  padding: 26px;
+}
+.title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 60px;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+.sign-in-title {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+.sign-in-inputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+}
+.sign-in-text-inputs {
+  text-align: center;
+}
+.sign-in-button {
+  text-align: center;
+}
+.button {
+  background-color: #7ec0ee;
+  border: none;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.text-input {
+  border: none;
+  height: 30px;
+  width: 200px;
+  font-size: 30px;
+  margin-top: 10px;
   padding: 10px;
+  margin: 10px;
 }
 a {
   padding: 5px;
-  background-color: blue;
+  text-decoration: none;
+  color: black;
 }
 body {
   font-family: 'Bitter', serif;
@@ -26,3 +75,22 @@ body {
   min-height: 650px;
   background-position: 0px 100px;
 }
+.center-screen-dim {
+  background-color: rgba(0, 0, 0, .5);
+  height: 90vh;
+  width: 90vw;
+  max-height: 80vh;
+  position: absolute;
+  top: 90px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.landing-info {
+  color: white;
+  font-size: 30px;
+  padding: 5px;
+  padding-left: 20px;
+}
+

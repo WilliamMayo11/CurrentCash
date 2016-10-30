@@ -4,15 +4,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
+
 <body>
-<h1>Sign Up</h1>
-<form action="/users" method="post">
-  <input type="text" name="user[username]" value="" placeholder="Username">
-  <input type="password" name="user[password]" value="" placeholder="Password">
-  <input type="submit" value="Sign up">
-</form>
+  <header class="header-container">
+    <h1 class="title">Current Cash</h1>
+    <div class="link-container">
+      <a href="/signup">Sign Up</a>
+      <a href="/login">Log In</a>
+    </div>
+  </header>
+  <div class="center-screen-dim">
+  <div class="sign-in-inputs-wrapper">
+  <h1 class="sign-in-title">Sign Up</h1>
+    <form action="/users" method="post">
+      <div class="sign-in-text-inputs">
+        <input class="text-input" type="text" name="user[username]" value="" placeholder="Username">
+        <input class="text-input" type="password" name="user[password]" value="" placeholder="Password">
+      </div>
+      <div class="sign-in-button">
+        <input class="button" type="submit" value="Sign up">
+      </div>
+    </form>
+  </div>
+  </div>
 
 </body>
 </html>
