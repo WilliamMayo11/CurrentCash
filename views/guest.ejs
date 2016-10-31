@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Login</title>
+  <title>Home</title>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
@@ -17,19 +17,26 @@
       <a href="/login">Log In</a>
       <a href="/guest">Guest</a>
     </div>
-  <div class="center-screen-dim">
-  <div class="sign-in-inputs-wrapper">
-  <h1 class="sign-in-title">Login</h1>
-  <form action="/auth" method="post">
-  <div class="sign-in-text-inputs">
-    <input class="text-input" type="text" name="user[username]" value="" placeholder="Username">
-    <input class="text-input" type="password" name="user[password]" value="" placeholer="Password">
+
+  <div class="center-screen-white">
+    <h3 class="guest-title">Welcome to Guest Access</h3>
+    <h4>Choose a currency</h4>
+
+      <form action="/exchanges/guestsearch" method="get">
+        <input type="text" name="base" placeholder="Type Currency Code">
+        <input type="submit" value="Search">
+      </form>
   </div>
-    <div class="sign-in-button">
-      <input class="button" type="submit" value="Log In">
-    </div>
-  </form>
+  <div class="search-results-container">
+    <h2>Search Results</h2>
+      <% countries.forEach((item) => { %>
+        <div><%= item.name %></div>
+      <% }); %>
   </div>
-  </div>
+
+
+
+
+
 </body>
 </html>

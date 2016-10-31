@@ -28,13 +28,19 @@ exchangesRouter.get('/search', authenticate, findCountries, baseRate, getFavorit
   });
 });
 
+exchangesRouter.get('/guestsearch', findCountries, (req, res) => {
+  res.render('/guest', {
+    countries: res.countries || []
+  })
+})
+
 exchangesRouter.post('/exchanges/favorites', authenticate, saveFavorite, baseRate, findCountries, (req, res) => {
   console.log(res.saved);
   res.redirect('/exchanges');
 });
 
-exchangesRouter.post('/exchanges/favorites/:id', authenticate, deleteFavorite, (req, res) => {
+exchangesRouter.delete('/exchanges/favorites/:id', deleteFavorite, (req, res) => {
   res.redirect('/exchanges');
-})
+});
 
 module.exports = exchangesRouter;
