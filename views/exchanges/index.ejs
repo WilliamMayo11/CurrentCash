@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gruppo" rel="stylesheet">
 </head>
 <body>
   <header class="header-container">
-    <h1 class="title">Current Cash</h1>
+    <h1 class="title">CURRENT CASH</h1>
     <div class="link-container">
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
@@ -19,26 +19,62 @@
   </header>
   <div class="center-screen-white">
     <h1 class="guest-title">Find Country and Exchange Rate</h1>
-    <h3>for <%= user.username %></h3>
+    <h2><%= user.username %>'s Profile</h2>
 
 
-  <form action="/exchanges/search" method="get">
-    <input type="text" name="base" placeholder="Type Currency Code">
-    <input type="submit" value="Search">
-  </form>
+    <div>
+      <form action="/exchanges/search" method="get">
+        <select name="base" id="">
+          <option value=""></option>
+          <option value="USD">USD - US Dollar</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="BGN">BGN - Bulgarian Lev</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="CZK">CZK - Czech Republic Koruna</option>
+          <option value="DKK">DKK - Danish Krone</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="HRK">HRK - Croatian Kuna</option>
+          <option value="HUF">HUF - Hungarian Forint</option>
+          <option value="IDR">IDR - Indonesian Rupiah</option>
+          <option value="ILS">ILS - Israeli New Sheqel</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="KRW">KRW - South Korean Won</option>
+          <option value="MXN">MXN - Mexican Peso</option>
+          <option value="MYR">MYR - Malaysian Ringgit</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+          <option value="NZD">NZD - New Zealand Dollar</option>
+          <option value="PHP">PHP - Philippine Peso</option>
+          <option value="PLN">PLN - Polish Zloty</option>
+          <option value="RON">RON - Romanian Leu</option>
+          <option value="RUB">RUB - Russian Ruble</option>
+          <option value="SEK">SEK - Swedish Krona</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+          <option value="THB">THB - Thai Baht</option>
+          <option value="TRY">TRY - Turkish Lira</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+        </select>
+        <input type="submit" value="Search">
+      </form>
+    </div>
 
   <div class="rate-and-country-flex">
 
   <div class="search-results-container">
-    <h2>Search Results</h2>
+    <h3>Countries that use your searched currency:</h3>
     <% countries.forEach((item) => { %>
     <div><%= item.name %></div>
     <% }); %>
 
   <div class="current-rates-container">
+  <h3>Exchange Rates:</h3>
       <% let allRates = money.rates;
         for (let code in allRates) { %>
-        <div><%= code + ": " + allRates[code] %>
+        <div class="save-flex"><%= code + ": " + allRates[code] %>
           <form action="exchanges/favorites" method="POST">
             <input type="hidden" name="favorite[rates]" value='<%= code + ": " + allRates[code] %>' >
             <input type="submit" value="SAVE">
@@ -53,7 +89,7 @@
 
   <div class="favorites">
 
-    <h2>Favorites:</h2>
+    <h2>Watch List:</h2>
       <% saved.forEach((item) => { %>
         <p><%= item.rates %></p>
         <form action="exchanges/favorites/<%= item._id %>?_method=DELETE" method="post">

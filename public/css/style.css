@@ -1,5 +1,5 @@
 .header-container {
-  background-color: white;
+  background-color: #7ec0ee;
   height: 80px;
   width: cover;
   display: flex;
@@ -7,6 +7,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #7ec0ee;
   min-width: 700px;
+  color: white;
 }
 .link-container {
   display: flex;
@@ -17,7 +18,7 @@
   padding: 26px;
 }
 .title {
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Gruppo', cursive;
   font-size: 60px;
   margin-top: 0px;
   margin-left: 10px;
@@ -108,10 +109,23 @@ body {
   overflow: auto;
 }
 .landing-info {
-  color: white;
+  color: black;
   font-size: 30px;
   padding: 5px;
   padding-left: 20px;
+}
+.landing-info-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  border: 2px solid #7ec0ee;
+  overflow: auto;
 }
 .search-exchanges-link {
   color: black;
@@ -123,5 +137,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
+.save-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+
+
+
+
+
+
