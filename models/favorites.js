@@ -1,11 +1,10 @@
 const { MongoClient, ObjectID } = require('mongodb');
 
-const DB_CONNECTION = 'mongodb://localhost:27017/current_cash';
 const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/current_cash';
 
 function getFavorites(req, res, next) {
   // find all favorites for your userId
-  MongoClient.connect(DB_CONNECTION, (err, db) => {
+  MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
       .find({ userId: { $eq: req.session.userId } })
@@ -32,7 +31,7 @@ function saveFavorite(req, res, next) {
   // Adding userId to insertObj
   insertObj.favorite.userId = req.session.userId;
 
-  MongoClient.connect(DB_CONNECTION, (err, db) => {
+  MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
       .insert(insertObj.favorite, (insertErr, result) => {
@@ -50,7 +49,7 @@ function saveFavorite(req, res, next) {
 // based on that object's unique _id - you do not need to specify which user as
 // the _id is sufficient enough
 function deleteFavorite(req, res, next) {
-  MongoClient.connect(DB_CONNECTION, (err, db) => {
+  MongoClient.connect(dbConnection, (err, db) => {
     if (err) return next(err);
     db.collection('favorites')
       .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, result) => {

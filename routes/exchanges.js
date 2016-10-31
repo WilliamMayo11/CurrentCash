@@ -6,7 +6,6 @@ const { findCountries } = require('../services/restCountriesApi');
 const { saveFavorite } = require('../models/favorites');
 const { getFavorites } = require('../models/favorites');
 const { deleteFavorite } = require('../models/favorites');
-const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/current_cash';
 
 
 exchangesRouter.get('/', authenticate, getFavorites, (req, res) => {
