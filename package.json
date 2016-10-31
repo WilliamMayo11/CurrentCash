@@ -1,7 +1,7 @@
 {
   "name": "current_cash_v2",
   "version": "1.0.0",
-  "description": "Daily exchange rate comparison",
+  "description": "Currency comparison with save feature.",
   "engines": {
     "node": "6.6.0",
     "npm": "3.10.7"
