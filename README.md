@@ -21,7 +21,10 @@ Unsolved Problems-
 -Remove items from watchlist (delete favorites)
 is failing.
 -Logout post/delete user id from session failing.
--Better specificity about exchange rates.
+-Better specificity about exchange rates when saving. 
+Should include what rate it is being compared to.
 -More data models - track exchange rates over time.
 -Better user directions
+-Better displays when navigating. Page should continue
+to display countries after selecting 'save'.
 
