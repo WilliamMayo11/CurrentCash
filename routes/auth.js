@@ -3,6 +3,7 @@
 
 const express           = require('express');
 const { logIn }  = require('../lib/auth');
+const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/current_cash';
 
 // Router
 const authRouter = express.Router();
