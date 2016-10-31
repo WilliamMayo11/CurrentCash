@@ -1,5 +1,5 @@
 const express = require('express');
-const indexRouter = express.Router();
+const indexRouter = require('express').Router();
 const { authenticate } = require('../lib/auth');
 const { findCountries } = require('../services/restCountriesApi');
 
@@ -15,9 +15,9 @@ indexRouter.get('/login', (req, res) => {
   res.render('login');
 });
 
-indexRouter.get('/guest', findCountries, (req, res) => {
+indexRouter.get('/guest', (req, res) => {
   res.render('guest', {
-    countries: res.countries || []
+    countries: []
   });
 });
 

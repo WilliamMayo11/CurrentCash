@@ -1,4 +1,4 @@
-const exchangesRouter              = require('express').Router();
+const exchangesRouter      = require('express').Router();
 const { authenticate }    = require('../lib/auth');
 const { baseRate }     = require('../services/fixerApi');
 const { getExchangeRate } = require('../services/fixerApi');
@@ -30,7 +30,8 @@ exchangesRouter.get('/search', authenticate, findCountries, baseRate, getFavorit
 
 exchangesRouter.get('/guestsearch', findCountries, (req, res) => {
   res.render('guest', {
-    countries: res.countries || []
+    countries: res.countries || [],
+    currencyType: res.currencyType
   });
 });
 

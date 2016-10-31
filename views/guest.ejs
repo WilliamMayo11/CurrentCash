@@ -17,22 +17,64 @@
       <a href="/login">Log In</a>
       <a href="/guest">Guest</a>
     </div>
-
+</header>
   <div class="center-screen-white">
     <h3 class="guest-title">Welcome to Guest Access</h3>
     <h4>Choose a currency</h4>
 
+    <div>
       <form action="/exchanges/guestsearch" method="get">
-        <input type="text" name="base" placeholder="Type Currency Code">
+        <select name="base" id="">
+          <option value=""></option>
+          <option value="USD">USD - US Dollar</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="BGN">BGN - Bulgarian Lev</option>
+          <option value="BRL">BRL - Brazilian Real</option>
+          <option value="CAD">CAD - Canadian Dollar</option>
+          <option value="CHF">CHF - Swiss Franc</option>
+          <option value="CNY">CNY - Chinese Yuan</option>
+          <option value="CZK">CZK - Czech Republic Koruna</option>
+          <option value="DKK">DKK - Danish Krone</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="HKD">HKD - Hong Kong Dollar</option>
+          <option value="HRK">HRK - Croatian Kuna</option>
+          <option value="HUF">HUF - Hungarian Forint</option>
+          <option value="IDR">IDR - Indonesian Rupiah</option>
+          <option value="ILS">ILS - Israeli New Sheqel</option>
+          <option value="INR">INR - Indian Rupee</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="KRW">KRW - South Korean Won</option>
+          <option value="MXN">MXN - Mexican Peso</option>
+          <option value="MYR">MYR - Malaysian Ringgit</option>
+          <option value="NOK">NOK - Norwegian Krone</option>
+          <option value="NZD">NZD - New Zealand Dollar</option>
+          <option value="PHP">PHP - Philippine Peso</option>
+          <option value="PLN">PLN - Polish Zloty</option>
+          <option value="RON">RON - Romanian Leu</option>
+          <option value="RUB">RUB - Russian Ruble</option>
+          <option value="SEK">SEK - Swedish Krona</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+          <option value="THB">THB - Thai Baht</option>
+          <option value="TRY">TRY - Turkish Lira</option>
+          <option value="ZAR">ZAR - South African Rand</option>
+        </select>
         <input type="submit" value="Search">
       </form>
-    <div class="search-results-container">
-      <h2>Search Results</h2>
-      <% countries.forEach((item) => { %>
-      <div><%= item.name %></div>
-      <% }); %>
     </div>
+<div>
+    <h2>Countries that use your chosen currency:</h2>
+    <% countries.forEach((item) => { %>
+    <div><%= item.name %></div>
+    <% }); %>
+</div>
+
+<div>
+  <h3>Sign up, log in, and see how this currency compares to currencies around the world</h3>
+</div>
   </div>
+
+
+
 
 
 

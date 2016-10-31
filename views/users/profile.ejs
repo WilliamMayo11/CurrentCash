@@ -13,16 +13,17 @@
   <header class="header-container">
     <h1 class="title">Current Cash</h1>
     <div class="link-container">
-      <a href="/index">Home</a>
-      <a href="/login">Log In</a>
-      <a href="/guest">Guest</a>
-    </div>
-  </header>
-    <h1>Welcome! <%= user.username %></h1>
-    <a href="/exchanges">Search Exchange Rates</a>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>
+    </div>
+  </header>
 
+  <div class="center-screen-white">
+    <h1 class="guest-title">Welcome, <%= user.username %>!</h1>
+    <div class="search-exchanges-link">
+    <a href="/exchanges">Let's see today's exchange rates. Just click here!</a>
+    </div>
+  </div>
   </body>
 </html>
