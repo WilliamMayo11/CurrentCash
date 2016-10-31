@@ -3,9 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>Profile</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   </head>
+
   <body>
-    <!-- Example -->
+  <header class="header-container">
+    <h1 class="title">Current Cash</h1>
+    <div class="link-container">
+      <a href="/index">Home</a>
+      <a href="/login">Log In</a>
+      <a href="/guest">Guest</a>
+    </div>
+  </header>
     <h1>Welcome! <%= user.username %></h1>
     <a href="/exchanges">Search Exchange Rates</a>
     <form action="/auth?_method=DELETE" method="post">

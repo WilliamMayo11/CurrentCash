@@ -29,10 +29,10 @@ exchangesRouter.get('/search', authenticate, findCountries, baseRate, getFavorit
 });
 
 exchangesRouter.get('/guestsearch', findCountries, (req, res) => {
-  res.render('/guest', {
+  res.render('guest', {
     countries: res.countries || []
-  })
-})
+  });
+});
 
 exchangesRouter.post('/exchanges/favorites', authenticate, saveFavorite, baseRate, findCountries, (req, res) => {
   console.log(res.saved);
