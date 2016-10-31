@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Daily exchange rate comparison",
   "engines": {
-    "node": "^6.6.0"
+    "node": "v6.6.0"
   },
   "main": "app.js",
   "scripts": {
