@@ -1,5 +1,7 @@
-const { MongoClient, ObjectID } = require('mongodb');
+// Code on this page attributed to Bobby King and Rafa Pacas
+// From General Assembly WDI labs - Cruise Movies and iTunes CRUD
 
+const { MongoClient, ObjectID } = require('mongodb');
 const dbConnection = process.env.MONGODB_URI || 'mongodb://localhost:27017/current_cash';
 
 function getFavorites(req, res, next) {

@@ -17,6 +17,18 @@
   width: 250px;
   padding: 26px;
 }
+.log-out-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 40px;
+  width: 250px;
+  padding: 26px;
+}
+.logout-button {
+  background-color: transparent;
+  border: none;
+}
 .title {
   font-family: 'Gruppo', cursive;
   font-size: 60px;

@@ -11,9 +11,9 @@
 <body>
   <header class="header-container">
     <h1 class="title">CURRENT CASH</h1>
-    <div class="link-container">
+    <div class="logout-container">
     <form action="/auth?_method=DELETE" method="post">
-      <input type="submit" value="Logout">
+      <input class="logout-button" type="submit" value="Logout">
     </form>
     </div>
   </header>
@@ -92,7 +92,7 @@
     <h2>Watch List:</h2>
       <% saved.forEach((item) => { %>
         <p><%= item.rates %></p>
-        <form action="exchanges/favorites/<%= item._id %>?_method=DELETE" method="post">
+        <form action="/exchanges/favorites/<%= item._id %>?_method=DELETE" method="post">
           <input type="submit" value="Delete">
         </form>
       <% }) %>

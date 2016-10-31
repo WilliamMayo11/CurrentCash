@@ -18,5 +18,10 @@ fixer.io - Daily currency rates with conversion.
 https://restcountries.eu/ - Country list for currency types.
 
 Unsolved Problems-
-
+-Remove items from watchlist (delete favorites)
+is failing.
+-Logout post/delete user id from session failing.
+-Better specificity about exchange rates.
+-More data models - track exchange rates over time.
+-Better user directions
 
