@@ -1,4 +1,5 @@
 CURRENT CASH -
+View at: http://current-cash.herokuapp.com/
 
 Synopsis-
 This full-stack application looks at the currency of
