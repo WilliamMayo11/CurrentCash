@@ -1,7 +1,5 @@
 const express = require('express');
 const indexRouter = require('express').Router();
-const { authenticate } = require('../lib/auth');
-const { findCountries } = require('../services/restCountriesApi');
 
 indexRouter.get('/', (req, res) => {
   res.render('index');
