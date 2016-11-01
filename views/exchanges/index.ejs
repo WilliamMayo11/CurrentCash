@@ -18,11 +18,12 @@
     </div>
   </header>
   <div class="center-screen-white">
-    <h1 class="guest-title">Find Country and Exchange Rate</h1>
+    <h1 class="guest-title">Exchange Rate and Country List</h1>
     <h2><%= user.username %>'s Profile</h2>
 
 
     <div>
+    <h3>Choose a Currency:</h3>
       <form action="/exchanges/search" method="get">
         <select name="base" id="">
           <option value=""></option>
@@ -65,13 +66,14 @@
   <div class="rate-and-country-flex">
 
   <div class="search-results-container">
-    <h3>Countries that use your searched currency:</h3>
+    <h3>See countries using that currency:</h3>
     <% countries.forEach((item) => { %>
     <div><%= item.name %></div>
     <% }); %>
+  </div>
 
   <div class="current-rates-container">
-  <h3>Exchange Rates:</h3>
+  <h3>Today's Exchange Rates:</h3>
       <% let allRates = money.rates;
         for (let code in allRates) { %>
         <div class="save-flex"><%= code + ": " + allRates[code] %>
@@ -82,7 +84,6 @@
         </div>
     <% } %>
 
-  </div>
   </div>
 
 

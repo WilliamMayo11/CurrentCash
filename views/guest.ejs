@@ -20,7 +20,7 @@
 </header>
   <div class="center-screen-white">
     <h3 class="guest-title">Welcome to Guest Access</h3>
-    <h4>Choose a currency</h4>
+    <h3>Choose a currency:</h3>
 
     <div>
       <form action="/exchanges/guestsearch" method="get">
@@ -62,7 +62,7 @@
       </form>
     </div>
 <div>
-    <h3>Countries that use your chosen currency:</h3>
+    <h3>See countries that use that currency:</h3>
     <% countries.forEach((item) => { %>
     <div><%= item.name %></div>
     <% }); %>
