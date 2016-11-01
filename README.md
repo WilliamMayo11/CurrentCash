@@ -24,7 +24,20 @@ is failing.
 -Better specificity about exchange rates when saving. 
 Should include what rate it is being compared to.
 -More data models - track exchange rates over time.
+-More interesting data from Countries API
 -Better user directions
 -Better displays when navigating. Page should continue
 to display countries after selecting 'save'.
+
+User Story-
+It starts with curiosity, a desire for some factoids 
+about currencies. I can select from a dropdown menu
+of about 40 of the world's most used currencies, and 
+I can see which countries it. As a signed in user, 
+I can also see its value as it compares to other 
+currencies of the world. I can even save a certain 
+comparison to a currencies-to-watch list.
+
+
+
 
